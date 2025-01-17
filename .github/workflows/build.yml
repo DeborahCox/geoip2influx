@@ -1,5 +1,6 @@
 name: build
 on:
+  workflow_dispatch:
   push:
     branches: 
       - master
@@ -26,5 +27,5 @@ jobs:
           password: ${{ secrets.GH_PAT }}
       - name: build&push
         run: |
-              docker build . --tag ghcr.io/gilbn/geoip2influx
-              docker push ghcr.io/gilbn/geoip2influx
+              docker build . --tag ghcr.io/deborahcox/geoip2influx
+              docker push ghcr.io/deborahcox/geoip2influx

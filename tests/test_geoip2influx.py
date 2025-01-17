@@ -11,7 +11,7 @@ INVALID_LOG_PATH = "tests/invalid_logs.txt"
 TEST_IPV6 = "2607:f0d0:1002:51::4"
 
 test_geo_metrics: list[dict] = [{'tags': {'geohash': '9ydqy025w0qn', 'ip': '2607:f0d0:1002:51::4', 'host': 'localhost', 'country_code': 'US', 'country_name': 'United States', 'state': '-', 'state_code': '-', 'city': '-', 'postal_code': '-', 'latitude': 37.751, 'longitude': -97.822}, 'fields': {'count': 1}, 'measurement': 'geoip2influx'}]
-test_log_metrics: list[dict] = [{'tags': {'ip': '2607:f0d0:1002:51::4', 'datetime': datetime.datetime(2024, 8, 3, 13, 14, 23, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))), 'remote_user': '-', 'method': 'GET', 'referrer': '/wp-includes/Text/about.php', 'host': ' yourdomain.com ', 'http_version': 'HTTP/2.0', 'status_code': '404', 'bytes_sent': '36', 'url': '-', 'user_agent': '-', 'request_time': '0.002', 'connect_time': '0.000', 'city': 'Hong Kong', 'country_code': 'HK', 'country_name': 'United States'}, 'fields': {'count': 1, 'bytes_sent': 36, 'request_time': 0.002, 'connect_time': 0.0}, 'measurement': 'nginx_access_logs'}]
+test_log_metrics: list[dict] = [{'tags': {'ip': '2607:f0d0:1002:51::4', 'datetime': datetime.datetime(2024, 8, 3, 13, 14, 23, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))), 'remote_user': '-', 'method': 'GET', 'referrer': '/wp-includes/Text/about.php', 'host': 'yourdomain.com', 'http_version': 'HTTP/2.0', 'status_code': '404', 'bytes_sent': '36', 'url': '-', 'user_agent': '-', 'request_time': '0.002', 'connect_time': '0.000', 'city': 'Hong Kong', 'country_code': 'HK', 'country_name': 'United States'}, 'fields': {'count': 1, 'bytes_sent': 36, 'request_time': 0.002, 'connect_time': 0.0}, 'measurement': 'nginx_access_logs'}]
 
 @pytest.fixture
 def load_valid_ipv4_log() -> list[str]:

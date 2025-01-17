@@ -55,7 +55,9 @@ def create_log_pattern(ip_pattern: str) -> re.Pattern[str]:
     (?P<bytes_sent>{Rgx.BYTES_SENT_PATTERN})
     \s?"
     (?P<url>{Rgx.URL_PATTERN})"
+    \s?"
     (?P<host>{Rgx.HOST_PATTERN})"
+    \s?"
     (?P<user_agent>{Rgx.USER_AGENT_PATTERN})
     "\s?"
     (?P<request_time>{Rgx.REQUEST_TIME_PATTERN})"

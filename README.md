@@ -192,10 +192,10 @@ $geoip2_data_country_iso_code country iso_code;
 $geoip2_data_city_name city names en;
 }
 
-log_format custom '$remote_addr - $remote_user [$time_local]'
-           '"$request" $status $body_bytes_sent'
-           '"$http_referer" $host "$http_user_agent"'
-           '"$request_time" "$upstream_connect_time"'
+log_format custom '$remote_addr - $remote_user [$time_local] '
+           '"$request" $status $body_bytes_sent '
+           '"$http_referer" "$host" "$http_user_agent" '
+           '"$request_time" "$upstream_connect_time" '
            '"$geoip2_data_city_name" "$geoip2_data_country_iso_code"';
  ```
  
